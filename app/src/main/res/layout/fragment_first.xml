@@ -34,17 +34,6 @@
 
     <!-- Welcome Title -->
 
-    <ImageView
-        android:id="@+id/image_woman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/women"
-        app:layout_constraintBottom_toBottomOf="@+id/image_background_main"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/text_welcome_title"
         android:layout_width="0dp"
