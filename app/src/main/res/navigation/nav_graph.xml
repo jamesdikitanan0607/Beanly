@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LandingFragment">
+
+    <fragment
+        android:id="@+id/LandingFragment"
+        android:name="com.example.myapplication.LandingFragment"
+        android:label="Welcome to Beanly"
+        tools:layout="@layout/fragment_landing">
+
+        <action
+            android:id="@+id/action_LandingFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.myapplication.FirstFragment"
+        android:label="First Screen"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+            
+        <action
+            android:id="@+id/action_FirstFragment_to_SignupFragment"
+            app:destination="@id/SignupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="Second Screen"
+        tools:layout="@layout/fragment_second">
+        
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.myapplication.LoginFragment"
+        android:label="Login Screen"
+        tools:layout="@layout/fragment_login">
+        
+        <action
+            android:id="@+id/action_LoginFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+            
+        <action
+            android:id="@+id/action_LoginFragment_to_SignupFragment"
+            app:destination="@id/SignupFragment" />
+            
+        <action
+            android:id="@+id/action_LoginFragment_to_LandingFragment"
+            app:destination="@id/LandingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignupFragment"
+        android:name="com.example.myapplication.SignupFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+        
+        <action
+            android:id="@+id/action_SignupFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+            
+        <action
+            android:id="@+id/action_SignupFragment_to_LandingFragment"
+            app:destination="@id/LandingFragment" />
+    </fragment>
+
+</navigation>

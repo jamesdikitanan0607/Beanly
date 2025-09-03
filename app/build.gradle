@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+    // id 'kotlin-android' // If you were using Kotlin
+}
+
+android {
+    namespace 'com.example.myapplication'
+    compileSdk 34 // Or your current compile SDK
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Check for latest stable
+    implementation 'com.google.android.material:material:1.11.0' // Check for latest stable
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Check for latest stable
+
+    // Navigation Component
+    def nav_version = "2.7.7" // Use latest stable version
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
